@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Introdução - Exc 5</title>
+</head>
+
+<body>
+
+    <h1 align="center">Verifique o console</h1>
+
+    <script>
+        function print(info){
+            for(let value of info){
+                console.log ("O "+value.nome+" possui as habilidades: "+value.habilidades+"");
+            }
+        }
+
+        var usuarios = [
+        {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+        ];
+
+        print(usuarios);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Introdução - Exc 4</title>
+</head>
+
+<body>
+
+    <h1 align="center">Verifique o console</h1>
+
+    <script>
+        function experiencia(anos) {
+            if (anos >=0 && anos <1){
+                console.log("Iniciante");
+            }else if(anos >=1 && anos <3){
+                console.log("Intermediário");
+            }else if( anos >= 3 && anos <7){
+                console.log("Avançado")
+            }else if(anos >=7){
+                console.log("Jedi Master");
+            }else{
+                console.log("Insira um tempo de experiência válido")
+            }
+        }
+
+        var anosEstudo = 7;
+        experiencia(anosEstudo);
+    </script>
+
+</body>
+</html>

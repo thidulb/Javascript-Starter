@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Manipulando a DOM - Exc 2</title>
+  </head>
+
+  <body>
+
+    <div id="app">
+      <button id="btn_add" style="width: 100px;">Adicionar</button>
+    </div>
+
+    <script>
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }return color;
+      }
+        
+      var btnAdd = document.querySelector("button#btn_add");
+      var num = 0;
+
+      btnAdd.onclick = function(){
+        num++;  
+        var square = document.createElement("div");
+        square.style.marginTop = "10px";
+        square.style.width = "100px";
+        square.style.height = "100px";
+        square.style.backgroundColor = "#f00000";
+        square.title = "Square " + num;
+        square.id ="square" + num;
+        square.setAttribute("onmouseover", "style.backgroundColor = getRandomColor()");
+        document.querySelector("div#app").appendChild(square);
+      }
+    </script>
+    
+  </body>
+</html>

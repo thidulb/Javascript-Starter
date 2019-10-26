@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Manipulando a DOM - Exc 4</title>
+  </head>
+
+  <body>
+    <div >
+        <input type="text" name="novonome">
+        
+        <button onClick="adicionar()">Adicionar</button>
+    </div>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      console.log(nomes);
+      var i;
+    
+      for(i=0;i<nomes.length;i++){
+        console.log(nomes[i]);
+        var nome = document.createElement("li");
+        nome.textContent = nomes[i];
+        document.querySelector("ul#lista").appendChild(nome);
+      }
+
+      function adicionar(novonome){
+        var nomeInput = document.querySelector("input");
+        var nome = document.createElement("li");
+        nome.textContent = nomeInput.value;
+        document.querySelector("ul#lista").appendChild(nome);
+        nomeInput.value="";
+      }
+    </script>
+    
+  </body>
+</html>

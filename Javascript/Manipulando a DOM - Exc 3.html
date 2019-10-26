@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Manipulando a DOM - Exc 3</title>
+  </head>
+
+  <body>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      console.log(nomes);
+      var i;
+    
+      for(i=0;i<nomes.length;i++){
+        console.log(nomes[i]);
+        var nome = document.createElement("li");
+        nome.textContent = nomes[i];
+        document.querySelector("ul#lista").appendChild(nome);
+      }
+
+    </script>
+    
+  </body>
+</html>
